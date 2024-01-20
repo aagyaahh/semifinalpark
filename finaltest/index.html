@@ -46,10 +46,21 @@
             <form>
                 <input type="text" placeholder="Location" required>
                 <input type="date" required>
-                <input type="text" placeholder="Day" required>
-                <input type="time" required>
-                <input type="text" placeholder="Payment" required>
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" required>
 
+                <label for="startTime">End Time:</label>
+                <input type="time" id="endTime" required>
+                <label class="centered-label">esewa id:**********</label>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Payment Options</button>
+                    <div class="dropdown-content">
+                        <a href="#">Cash Payment</a>
+                        <a href="https://www.esewa.com.np/" target="_blank">eSewa Payment</a>
+                    </div>
+                </div>
+                <label>Book your parking slot:</label>
                 <div class="parking-slot vacant">1</div>
                 <div class="parking-slot vacant">2</div>
                 <div class="parking-slot vacant">3</div>
