@@ -32,69 +32,72 @@
         </p>
     </section>
     <!-- login-->
+    <div class="about__section">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="button" onclick="showReservationForm()">Submit</button>
+            </form>
 
-    <div class="login-box">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="button" onclick="showReservationForm()">Submit</button>
-        </form>
+            <div class="form" id="reservationForm">
+                <h2>Reservation Form</h2>
+                <form>
+                    <input type="text" placeholder="Location" required>
+                    <input type="date" required>
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" required>
 
-        <div class="form" id="reservationForm">
-            <h2>Reservation Form</h2>
-            <form>
-                <input type="text" placeholder="Location" required>
-                <input type="date" required>
-                <label for="startTime">Start Time:</label>
-                <input type="time" id="startTime" required>
+                    <label for="startTime">End Time:</label>
+                    <input type="time" id="endTime" required>
+                    <label class="centered-label">esewa id:**********</label>
 
-                <label for="startTime">End Time:</label>
-                <input type="time" id="endTime" required>
-                <label class="centered-label">esewa id:**********</label>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Payment Options</button>
-                    <div class="dropdown-content">
-                        <a href="#">Cash Payment</a>
-                        <a href="https://www.esewa.com.np/" target="_blank">eSewa Payment</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Payment Options</button>
+                        <div class="dropdown-content">
+                            <a href="#">Cash Payment</a>
+                            <a href="https://www.esewa.com.np/" target="_blank">eSewa Payment</a>
+                        </div>
                     </div>
-                </div>
-                <label>Book your parking slot:</label>
-                <div class="parking-slot vacant">1</div>
-                <div class="parking-slot vacant">2</div>
-                <div class="parking-slot vacant">3</div>
-                <div class="parking-slot vacant">4</div>
-                <h4>Note:*Red is already reserved</h4>
-                <h4>*Green is for vaccant</h4>
+                    <label>Book your parking slot:</label>
+                    <div class="parking-slot vacant">1</div>
+                    <div class="parking-slot vacant">2</div>
+                    <div class="parking-slot vacant">3</div>
+                    <div class="parking-slot vacant">4</div>
+                    <h4>Note:*Red is already reserved</h4>
+                    <h4>*Green is for vaccant</h4>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const parkingSlots = document.querySelectorAll('.parking-slot');
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const parkingSlots = document.querySelectorAll('.parking-slot');
 
-                        parkingSlots.forEach(slot => {
-                            slot.addEventListener('click', function() {
-                                if (this.classList.contains('reserved')) {
-                                    this.classList.remove('reserved');
-                                    this.classList.add('vacant');
-                                } else {
-                                    this.classList.remove('vacant');
-                                    this.classList.add('reserved');
-                                }
+                            parkingSlots.forEach(slot => {
+                                slot.addEventListener('click', function() {
+                                    if (this.classList.contains('reserved')) {
+                                        this.classList.remove('reserved');
+                                        this.classList.add('vacant');
+                                    } else {
+                                        this.classList.remove('vacant');
+                                        this.classList.add('reserved');
+                                    }
+                                });
                             });
                         });
-                    });
-                </script>
-                <button type="button">Reserve</button>
-            </form>
+                    </script>
+                    <button type="button">Reserve</button>
+                </form>
+            </div>
         </div>
+
+
     </div>
     <!-- login-->
-    <section id="about-us">
-        <h1 class="h-primary center"> About Us </h1>
-    </section>
 
     <section id="services-container">
+        <section id="about-us">
+            <h1 class="h-primary center"> About Us </h1>
+        </section>
         <div id="services">
             <div class="box">
                 <img src="w3.png" alt="">
@@ -126,22 +129,22 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="box">
-                        <h4 class="price">$10</h4>
+                        <h4 class="price">Rs.10/-</h4>
                         <h5 class="name">Basic</h5>
                         <p>Consequuntur iure, quam vero quidem minima obcaecati veniam, praesentium impedit quod repudiandae tempora amet deserunt rerum accusamus. Commodi qui, illum ad ipsa porro ipsum nostrum magni minus.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="box box-center">
-                        <h4 class="price">$30</h4>
-                        <h5 class="name">Premium</h5>
+                        <h4 class="price">Rs.20/-</h4>
+                        <h5 class="name">Standard</h5>
                         <p>Consequuntur iure, quam vero quidem minima obcaecati veniam, praesentium impedit quod repudiandae tempora amet deserunt rerum accusamus. Commodi qui, illum ad ipsa porro ipsum nostrum magni minus.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="box">
-                        <h4 class="price">$20</h4>
-                        <h5 class="name">Standard</h5>
+                        <h4 class="price">Rs.30/-</h4>
+                        <h5 class="name">Premium</h5>
                         <p>Consequuntur iure, quam vero quidem minima obcaecati veniam, praesentium impedit quod repudiandae tempora amet deserunt rerum accusamus. Commodi qui, illum ad ipsa porro ipsum nostrum magni minus.</p>
                     </div>
                 </div>
@@ -155,9 +158,9 @@
         <div class="center">
             <h1 class="h-primary">Contact Us</h1>
             <div id="contact-info">
-                <p><strong>Location:</strong> Your Location, City, Country</p>
-                <p><strong>Phone:</strong> +123 456 7890</p>
-                <p><strong>Email:</strong> info@example.com</p>
+                <p><strong>Location:</strong>Location, City, Country</p>
+                <p><strong>Phone:</strong> 9812345678</p>
+                <p><strong>Email:</strong> speedpark@example.com</p>
             </div>
             <div id="social-media">
                 <a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
