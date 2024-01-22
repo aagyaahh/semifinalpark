@@ -211,12 +211,12 @@
         display: block;
     }
     /* login*/
-    
-    #services-container {
+    /* #services-container {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
+     */
     
     .box {
         text-align: center;
