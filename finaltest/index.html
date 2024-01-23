@@ -18,6 +18,29 @@
             <li class="item"><a href="#about-us">About Us</a></li>
             <li class="item"><a href="#pricing">Pricing</a></li>
             <li class="item"><a href="#contact-us">Contact Us</a></li>
+            <li class="item"><a href="#" onclick="openSignupModal()">Sign up</a></li>
+            <!-- Sign-up modal -->
+            <div id="signupModal" class="modal fullscreen">
+                <div class="modal-content">
+                    <span class="close" onclick="closeSignupModal()">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" pattern="A-Z" title="Only the letter 'Aa-Zz' allowed" required><br>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" pattern="[0-9]{10}" title="Only 10-digit numbers allowed" required><br>
+
+                        <label for="vehicleId">Vehicle ID:</label>
+                        <input type="text" id="vehicleId" required><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required><br>
+
+                        <button type="button" onclick="submitSignupForm()">Create Account</button>
+                    </form>
+                </div>
+            </div>
 
         </ul>
     </nav>
@@ -31,6 +54,7 @@
             Lorem, ipsum dolor sit amet consectetur adipisicin
         </p>
     </section>
+
     <!-- login-->
     <div class="about__section">
         <div class="login-box">
