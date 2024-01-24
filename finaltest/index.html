@@ -18,7 +18,7 @@
             <li class="item"><a href="#about-us">About Us</a></li>
             <li class="item"><a href="#pricing">Pricing</a></li>
             <li class="item"><a href="#contact-us">Contact Us</a></li>
-            <li class="item"><a href="#" onclick="openSignupModal()">Sign up</a></li>
+            <li class="item"><a href="#signup" onclick="openSignupModal()">Sign up</a></li>
             <!-- Sign-up modal -->
             <div id="signupModal" class="modal fullscreen">
                 <div class="modal-content">
@@ -34,9 +34,11 @@
                         <label for="vehicleId">Vehicle ID:</label>
                         <input type="text" id="vehicleId" required><br>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required><br>
+                        <label for="email">Username:</label>
+                        <input type="text" id="name" pattern="A-Z" title="Only the letter 'Aa-Zz' allowed" required><br>
 
+                        <label for="name">Password:</label>
+                        <input type="text" id="name" pattern="A-Z" title="Only the letter 'Aa-Zz' allowed" required><br>
                         <button type="button" onclick="submitSignupForm()">Create Account</button>
                     </form>
                 </div>
@@ -68,13 +70,27 @@
             <div class="form" id="reservationForm">
                 <h2>Reservation Form</h2>
                 <form>
-                    <input type="text" placeholder="Location" required>
+                    <label>Date:</label>
                     <input type="date" required>
                     <label for="startTime">Start Time:</label>
-                    <input type="time" id="startTime" required>
+                    <input type="time" id="startTime" oninput="calculatePayment()" required>
 
                     <label for="startTime">End Time:</label>
-                    <input type="time" id="endTime" required>
+                    <input type="time" id="endTime" oninput="calculatePayment()" required>
+                    <p id="result"></p>
+
+                    <script>
+                        function calculatePayment() {
+                            var startTime = document.getElementById('startTime').value;
+                            var endTime = document.getElementById('endTime').value;
+                            var startMinutes = parseInt(startTime.split(':')[0]) * 60 + parseInt(startTime.split(':')[1]);
+                            var endMinutes = parseInt(endTime.split(':')[0]) * 60 + parseInt(endTime.split(':')[1]);
+
+                            var timeGap = endMinutes - startMinutes;
+                            var payment = timeGap * 0.167;
+                            document.getElementById('result').innerHTML = 'Your Payment will be Rs.' + payment.toFixed(2);
+                        }
+                    </script>
                     <label class="centered-label">esewa id:**********</label>
 
                     <div class="dropdown">
