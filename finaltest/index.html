@@ -100,14 +100,18 @@
                             <a href="https://www.esewa.com.np/" target="_blank">eSewa Payment</a>
                         </div>
                     </div>
-                    <label>Book your parking slot:</label>
-                    <div class="parking-slot vacant">1</div>
-                    <div class="parking-slot vacant">2</div>
-                    <div class="parking-slot vacant">3</div>
-                    <div class="parking-slot vacant">4</div>
+                    <label class="center">Book your parking slot:</label>
+                    <div class="parking-container">
+                        <div class="parking-slot vacant">1</div>
+                        <div class="parking-slot vacant">2</div>
+                        <div class="parking-slot vacant">3</div>
+                        <div class="parking-slot vacant">4</div>
+                        <div class="parking-slot vacant">5</div>
+                        <label></label>
+
+                    </div>
                     <h4>Note:*Red is already reserved</h4>
                     <h4>*Green is for vaccant</h4>
-
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             const parkingSlots = document.querySelectorAll('.parking-slot');
@@ -163,9 +167,7 @@
     <!-- pricing section -->
     <section id="pricing" class="pricing_section layout_padding">
         <div class="container">
-            <div class="heading_container heading_center">
-                <h1>Our Pricing</h1>
-            </div>
+            <h1 class="h-primary center">Our Pricing </h1>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="box">
