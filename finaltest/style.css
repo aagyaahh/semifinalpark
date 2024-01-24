@@ -153,6 +153,10 @@ body {
     margin: 0;
 }
 
+.parking-container {
+    display: flex;
+}
+
 .parking-slot {
     width: 80px;
     height: 80px;
@@ -376,6 +380,23 @@ label {
     font-size: 1.3rem;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-md-6 {
+    flex: 0 0 calc(33.3333% - 20px);
+    margin: 10px;
+}
+
+.box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
 .pricing_section {
     position: relative;
 }
@@ -398,7 +419,7 @@ label {
     content: "";
     position: absolute;
     background: url('img/pricing-bg.jpg') no-repeat center center/cover;
-    height: 875px;
+    height: 515px;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -432,7 +453,7 @@ label {
 }
 
 .pricing_section .box.box-center {
-    margin-top: 45px;
+    margin-top: 76px;
 }
 
 #client-section {
@@ -474,7 +495,7 @@ label {
 footer {
     background-color: #ffde59;
     color: black;
-    padding: 20px;
+    padding: 42px;
     width: 100%;
 }
 
