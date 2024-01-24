@@ -119,6 +119,7 @@ login body {
 .form {
     display: none;
     margin-top: 20px;
+    width: 500px;
 }
 
 input {
